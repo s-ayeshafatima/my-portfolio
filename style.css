@@ -277,3 +277,162 @@ footer {
     padding: 20px 7%;
   }
 }
+
+/* ===== Hero section with profile picture ===== */
+
+.hero-container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  padding: 60px 0;
+}
+
+.hero-image {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  display: block;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid #8b5cf6;
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.18);
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 1.15;
+  margin: 16px 0;
+}
+
+.hero-content h1 span {
+  color: #a78bfa;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  margin-bottom: 18px;
+}
+
+.hero-description {
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Responsive layout for phones and small screens */
+
+@media (max-width: 760px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    padding: 45px 0;
+  }
+
+  .hero-image {
+    flex-basis: auto;
+  }
+
+  .profile-picture {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* ===== Hero button styling ===== */
+
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 30px;
+  min-height: 60px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* First button: purple */
+.hero-buttons a:first-child {
+  background: #9b87ff;
+  color: #101018;
+  border: 1px solid #9b87ff;
+}
+
+/* Second button: dark outlined */
+.hero-buttons a:last-child {
+  background: #141821;
+  color: #ffffff;
+  border: 1px solid #303746;
+}
+
+/* Hover effects */
+.hero-buttons a:first-child:hover {
+  background: #ad9dff;
+  transform: translateY(-3px);
+}
+
+.hero-buttons a:last-child:hover {
+  background: #202635;
+  border-color: #9b87ff;
+  transform: translateY(-3px);
+}
+
+/* ===== Profile picture sizing ===== */
+
+.hero-image {
+  flex: 0 0 260px;
+}
+
+.hero-image img.profile-picture {
+  width: 245px;
+  height: 245px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Smaller screen adjustment */
+@media (max-width: 760px) {
+  .hero-image {
+    flex-basis: auto;
+  }
+
+  .hero-image img.profile-picture {
+    width: 210px;
+    height: 210px;
+  }
+}
